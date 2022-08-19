@@ -67,7 +67,7 @@ def search(request):
     entries = util.list_entries()
     searchResults = []
     for entry in entries:
-        if q.upper == entry.upper:
+        if q.upper() == entry.upper():
             return redirect("entry", title=entry)
 
         elif q.upper() in entry.upper():
